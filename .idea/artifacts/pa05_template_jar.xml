@@ -1,0 +1,26 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="pa05-template:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/pa05_template_jar</output-path>
+    <root id="root">
+      <element id="archive" name="pa05-template.jar">
+        <element id="directory" name="META-INF">
+          <element id="file-copy" path="$PROJECT_DIR$/META-INF/MANIFEST.MF" />
+        </element>
+        <element id="module-output" name="pa05-template.main" />
+        <element id="library" level="project" name="Gradle: org.openjfx:javafx-fxml:20.0.1" />
+        <element id="library" level="project" name="Gradle: org.openjfx:javafx-fxml:win:20.0.1" />
+        <element id="library" level="project" name="Gradle: org.openjfx:javafx-controls:20.0.1" />
+        <element id="library" level="project" name="Gradle: org.openjfx:javafx-controls:win:20.0.1" />
+        <element id="library" level="project" name="Gradle: org.openjfx:javafx-graphics:20.0.1" />
+        <element id="library" level="project" name="Gradle: org.openjfx:javafx-graphics:win:20.0.1" />
+        <element id="library" level="project" name="Gradle: org.openjfx:javafx-base:20.0.1" />
+        <element id="library" level="project" name="Gradle: org.openjfx:javafx-base:win:20.0.1" />
+        <element id="library" level="project" name="Gradle: com.fasterxml.jackson.core:jackson-databind:2.15.0" />
+        <element id="library" level="project" name="Gradle: org.controlsfx:controlsfx:11.1.2" />
+        <element id="library" level="project" name="Gradle: com.fasterxml.jackson.core:jackson-annotations:2.15.0" />
+        <element id="library" level="project" name="Gradle: com.fasterxml.jackson.core:jackson-core:2.15.0" />
+        <element id="library" level="project" name="Gradle: ch.randelshofer:fastdoubleparser:0.8.0" />
+      </element>
+    </root>
+  </artifact>
+</component>

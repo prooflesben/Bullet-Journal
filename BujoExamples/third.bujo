@@ -1,0 +1,1 @@
+{"name":"Week1","tasks":[{"name":"random task","description":"","weekday":"WEDNESDAY","complete":true},{"name":"unfinished","description":"","weekday":"TUESDAY","complete":false},{"name":"finished","description":"","weekday":"MONDAY","complete":true}],"events":[],"maxEvents":1000,"maxTasks":1000,"notesAndQuotes":"","password":"password"}

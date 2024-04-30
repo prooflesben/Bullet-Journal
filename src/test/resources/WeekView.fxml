@@ -1,0 +1,405 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Scene?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<Scene fx:id="scene" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <root>
+      <AnchorPane prefHeight="200" prefWidth="200" style="-fx-background-color: white;">
+         <children>
+            <VBox prefHeight="727.0" prefWidth="1200.0" style="-fx-background-color: FBFBF5;">
+               <children>
+                  <ToolBar fx:id="menuBar" prefHeight="40.0" prefWidth="999.0" style="-fx-border-color: white; -fx-background-color: A0CE8B;">
+                     <items>
+                        <Button fx:id="newWeek" mnemonicParsing="false" prefHeight="13.0" prefWidth="100.0" style="-fx-background-color: A0CE8B; -fx-border-color: black;" text="New Week">
+                           <font>
+                              <Font name="Futura Medium" size="10.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="newEvent" mnemonicParsing="false" prefHeight="13.0" prefWidth="100.0" style="-fx-background-color: A0CE8B; -fx-border-color: black;" text="New Event">
+                           <font>
+                              <Font name="Futura Medium" size="10.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="newTask" mnemonicParsing="false" prefHeight="13.0" prefWidth="100.0" style="-fx-background-color: A0CE8B; -fx-border-color: black;" text="New Task">
+                           <font>
+                              <Font name="Futura Medium" size="10.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="maxEvents" mnemonicParsing="false" prefHeight="17.0" prefWidth="100.0" style="-fx-background-color: A0CE8B; -fx-border-color: black;" text="Set Max Events">
+                           <font>
+                              <Font name="Futura Medium" size="10.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="maxTasks" mnemonicParsing="false" prefHeight="17.0" prefWidth="100.0" style="-fx-background-color: A0CE8B; -fx-border-color: black;" text="Set Max Tasks">
+                           <font>
+                              <Font name="Futura Medium" size="10.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="save" mnemonicParsing="false" prefHeight="13.0" prefWidth="100.0" style="-fx-background-color: A0CE8B; -fx-border-color: black;" text="Save">
+                           <font>
+                              <Font name="Futura Medium" size="10.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="open" mnemonicParsing="false" prefHeight="13.0" prefWidth="100.0" style="-fx-background-color: A0CE8B; -fx-border-color: black;" text="Open">
+                           <font>
+                              <Font name="Futura Medium" size="10.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="setPassword" mnemonicParsing="false" prefHeight="13.0" prefWidth="100.0" style="-fx-background-color: A0CE8B; -fx-border-color: black;" text="Set Password">
+                           <font>
+                              <Font name="Futura Medium" size="10.0" />
+                           </font>
+                        </Button>
+                        <Label fx:id="maxTaskLabel" alignment="CENTER" prefHeight="17.0" prefWidth="98.0" text="Max Tasks:">
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <font>
+                              <Font name="Futura Medium" size="13.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="maxEventLabel" alignment="CENTER" prefHeight="17.0" prefWidth="113.0" text="Max Events:">
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <font>
+                              <Font name="Futura Medium" size="13.0" />
+                           </font>
+                        </Label>
+                     </items>
+                  </ToolBar>
+                  <HBox alignment="CENTER_LEFT" prefHeight="182.0" prefWidth="1200.0">
+                     <children>
+                        <ImageView fitHeight="44.0" fitWidth="50.0" focusTraversable="true" pickOnBounds="true" preserveRatio="true" translateX="15.0">
+                           <image>
+                              <Image url="@bujoLogo.png" />
+                           </image>
+                        </ImageView>
+                        <TextField fx:id="weekName" alignment="CENTER" prefHeight="53.0" prefWidth="204.0" promptText="Week Name" style="-fx-border-color: F6F6F0; -fx-background-color: FBFBF5;" translateX="25.0">
+                           <font>
+                              <Font name="Futura Medium" size="20.0" />
+                           </font>
+                        </TextField>
+                        <HBox alignment="CENTER_RIGHT" prefHeight="96.0" prefWidth="922.0" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="573.0" prefWidth="900.0">
+                     <children>
+                        <VBox alignment="BOTTOM_CENTER" prefHeight="561.0" prefWidth="205.0" style="-fx-background-color: F6F6F0;" translateX="-10.0">
+                           <children>
+                              <TextArea fx:id="notesAndQuotes" prefHeight="552.0" prefWidth="205.0" promptText="Notes and Quotes" style="-fx-border-color: white; -fx-background-color: F6F6F0;" wrapText="true">
+                                 <font>
+                                    <Font name="Futura Medium" size="13.0" />
+                                 </font>
+                              </TextArea>
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="596.0" prefWidth="774.0">
+                           <children>
+                              <GridPane fx:id="weekGrid" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="580.0" prefWidth="767.0" style="-fx-background-color: F6F6F0;">
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints maxHeight="198.0" minHeight="10.0" prefHeight="69.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="334.0" minHeight="10.0" prefHeight="254.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="353.0" minHeight="10.0" prefHeight="259.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <ScrollPane fx:id="sundayEvents" GridPane.rowIndex="1">
+                                       <content>
+                                          <VBox fx:id="sundayEventsBox" prefHeight="243.0" prefWidth="106.0" style="-fx-background-color: F6F6F0;" />
+                                       </content>
+                                    </ScrollPane>
+                                    <ScrollPane fx:id="tuesdayEvents" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                       <content>
+                                          <VBox fx:id="tuesdayEventsBox" prefHeight="247.0" prefWidth="108.0" style="-fx-background-color: F6F6F0;" />
+                                       </content>
+                                    </ScrollPane>
+                                    <ScrollPane fx:id="wednesdayEvents" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                                       <content>
+                                          <VBox fx:id="wednesdayEventsBox" prefHeight="247.0" prefWidth="108.0" style="-fx-background-color: F6F6F0;" />
+                                       </content>
+                                    </ScrollPane>
+                                    <ScrollPane fx:id="thursdayEvents" GridPane.columnIndex="4" GridPane.rowIndex="1">
+                                       <content>
+                                          <VBox fx:id="thursdayEventsBox" prefHeight="245.0" prefWidth="101.0" style="-fx-background-color: F6F6F0;" />
+                                       </content>
+                                    </ScrollPane>
+                                    <ScrollPane fx:id="fridayEvents" GridPane.columnIndex="5" GridPane.rowIndex="1">
+                                       <content>
+                                          <VBox fx:id="fridayEventsBox" prefHeight="247.0" prefWidth="107.0" style="-fx-background-color: F6F6F0;" />
+                                       </content>
+                                    </ScrollPane>
+                                    <ScrollPane fx:id="saturdayEvents" GridPane.columnIndex="6" GridPane.rowIndex="1">
+                                       <content>
+                                          <VBox fx:id="saturdayEventsBox" prefHeight="244.0" prefWidth="103.0" style="-fx-background-color: F6F6F0;" />
+                                       </content>
+                                    </ScrollPane>
+                                    <ScrollPane fx:id="sundayTasks" GridPane.rowIndex="2">
+                                       <content>
+                                          <VBox fx:id="sundayTasksBox" prefHeight="254.0" prefWidth="106.0" style="-fx-background-color: F6F6F0;" />
+                                       </content>
+                                    </ScrollPane>
+                                    <ScrollPane fx:id="mondayTasks" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                       <content>
+                                          <VBox fx:id="mondayTasksBox" prefHeight="256.0" prefWidth="108.0" style="-fx-background-color: F6F6F0;" />
+                                       </content>
+                                    </ScrollPane>
+                                    <ScrollPane fx:id="tuesdayTasks" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                                       <content>
+                                          <VBox fx:id="tuesdayTasksBox" prefHeight="255.0" prefWidth="105.0" style="-fx-background-color: F6F6F0;" />
+                                       </content>
+                                    </ScrollPane>
+                                    <ScrollPane fx:id="wednesdayTasks" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                                       <content>
+                                          <VBox fx:id="wednesdayTasksBox" prefHeight="255.0" prefWidth="108.0" style="-fx-background-color: F6F6F0;" />
+                                       </content>
+                                    </ScrollPane>
+                                    <ScrollPane fx:id="thursdayTasks" GridPane.columnIndex="4" GridPane.rowIndex="2">
+                                       <content>
+                                          <VBox fx:id="thursdayTasksBox" prefHeight="251.0" prefWidth="100.0" style="-fx-background-color: F6F6F0;" />
+                                       </content>
+                                    </ScrollPane>
+                                    <ScrollPane fx:id="fridayTasks" GridPane.columnIndex="5" GridPane.rowIndex="2">
+                                       <content>
+                                          <VBox fx:id="fridayTasksBox" prefHeight="255.0" prefWidth="106.0" style="-fx-background-color: F6F6F0;" />
+                                       </content>
+                                    </ScrollPane>
+                                    <ScrollPane fx:id="saturdayTasks" GridPane.columnIndex="6" GridPane.rowIndex="2">
+                                       <content>
+                                          <VBox fx:id="saturdayTasksBox" prefHeight="255.0" prefWidth="107.0" style="-fx-background-color: F6F6F0;" />
+                                       </content>
+                                    </ScrollPane>
+                                    <ScrollPane fx:id="mondayEvents" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                       <content>
+                                          <VBox fx:id="mondayEventsBox" prefHeight="243.0" prefWidth="102.0" style="-fx-background-color: F6F6F0;" />
+                                       </content>
+                                    </ScrollPane>
+                                    <VBox prefHeight="56.0" prefWidth="113.0">
+                                       <children>
+                                          <Label fx:id="sunday" alignment="CENTER" prefHeight="17.0" prefWidth="110.0" text="Sunday " textFill="#567b44">
+                                             <font>
+                                                <Font name="Futura Medium" size="18.0" />
+                                             </font></Label>
+                                          <HBox alignment="CENTER" prefHeight="27.0" prefWidth="111.0">
+                                             <children>
+                                                <Label alignment="CENTER" prefHeight="21.0" prefWidth="82.0" text=" Tasks Remaining">
+                                                   <font>
+                                                      <Font name="Futura Medium" size="10.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label fx:id="sundayRemaining" alignment="CENTER" contentDisplay="RIGHT" prefHeight="22.0" prefWidth="15.0" text="0">
+                                                   <font>
+                                                      <Font name="Futura Medium" size="10.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </HBox>
+                                          <ProgressBar fx:id="sundayBar" prefWidth="200.0" progress="0.0" />
+                                       </children>
+                                    </VBox>
+                                    <VBox prefHeight="56.0" prefWidth="113.0" GridPane.columnIndex="1">
+                                       <children>
+                                          <Label fx:id="monday" alignment="CENTER" prefHeight="17.0" prefWidth="113.0" text="Monday" textFill="#567b44">
+                                             <font>
+                                                <Font name="Futura Medium" size="18.0" />
+                                             </font></Label>
+                                          <HBox alignment="CENTER" prefHeight="27.0" prefWidth="111.0">
+                                             <children>
+                                                <Label alignment="CENTER" prefHeight="21.0" prefWidth="82.0" text=" Tasks Remaining">
+                                                   <font>
+                                                      <Font name="Futura Medium" size="10.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label fx:id="mondayRemaining" alignment="CENTER" contentDisplay="RIGHT" prefHeight="22.0" prefWidth="17.0" text="0">
+                                                   <font>
+                                                      <Font name="Futura Medium" size="10.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </HBox>
+                                          <ProgressBar fx:id="mondayBar" prefWidth="200.0" progress="0.0" />
+                                       </children>
+                                    </VBox>
+                                    <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="2">
+                                       <children>
+                                          <Label fx:id="tuesday" alignment="CENTER" prefHeight="17.0" prefWidth="115.0" text="Tuesday" textFill="#567b44">
+                                             <font>
+                                                <Font name="Futura Medium" size="18.0" />
+                                             </font></Label>
+                                          <HBox alignment="CENTER" prefHeight="27.0" prefWidth="111.0">
+                                             <children>
+                                                <Label prefHeight="21.0" prefWidth="82.0" text="  Tasks Remaining">
+                                                   <font>
+                                                      <Font name="Futura Medium" size="10.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label fx:id="tuesdayRemaining" alignment="CENTER" contentDisplay="RIGHT" prefHeight="22.0" prefWidth="18.0" text="0">
+                                                   <font>
+                                                      <Font size="10.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </HBox>
+                                          <ProgressBar fx:id="tuesdayBar" prefWidth="200.0" progress="0.0" />
+                                       </children>
+                                    </VBox>
+                                    <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="3">
+                                       <children>
+                                          <Label fx:id="wednesday" alignment="CENTER" prefHeight="17.0" prefWidth="113.0" text="Wednesday" textFill="#567b44">
+                                             <font>
+                                                <Font name="Futura Medium" size="18.0" />
+                                             </font></Label>
+                                          <HBox alignment="CENTER" prefHeight="27.0" prefWidth="111.0">
+                                             <children>
+                                                <Label prefHeight="21.0" prefWidth="82.0" text="  Tasks Remaining">
+                                                   <font>
+                                                      <Font name="Futura Medium" size="10.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label fx:id="wednesdayRemaining" alignment="CENTER" contentDisplay="RIGHT" prefHeight="22.0" prefWidth="18.0" text="0">
+                                                   <font>
+                                                      <Font name="Futura Medium" size="10.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </HBox>
+                                          <ProgressBar fx:id="wednesdayBar" prefWidth="200.0" progress="0.0" />
+                                       </children>
+                                    </VBox>
+                                    <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="4">
+                                       <children>
+                                          <Label fx:id="thursday" alignment="CENTER" prefHeight="17.0" prefWidth="114.0" text="Thursday" textFill="#567b44">
+                                             <font>
+                                                <Font name="Futura Medium" size="18.0" />
+                                             </font></Label>
+                                          <HBox alignment="CENTER" prefHeight="27.0" prefWidth="111.0">
+                                             <children>
+                                                <Label prefHeight="21.0" prefWidth="82.0" text="  Tasks Remaining">
+                                                   <font>
+                                                      <Font name="Futura Medium" size="10.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label fx:id="thursdayRemaining" alignment="CENTER" contentDisplay="RIGHT" prefHeight="22.0" prefWidth="16.0" text="0">
+                                                   <font>
+                                                      <Font name="Futura Medium" size="10.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </HBox>
+                                          <ProgressBar fx:id="thursdayBar" prefWidth="200.0" progress="0.0" />
+                                       </children>
+                                    </VBox>
+                                    <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="5">
+                                       <children>
+                                          <Label fx:id="friday" alignment="CENTER" prefHeight="17.0" prefWidth="118.0" text="Friday" textFill="#567b44">
+                                             <font>
+                                                <Font name="Futura Medium" size="18.0" />
+                                             </font></Label>
+                                          <HBox alignment="CENTER" prefHeight="27.0" prefWidth="111.0">
+                                             <children>
+                                                <Label prefHeight="21.0" prefWidth="82.0" text="  Tasks Remaining">
+                                                   <font>
+                                                      <Font name="Futura Medium" size="10.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label fx:id="fridayRemaining" alignment="CENTER" contentDisplay="RIGHT" prefHeight="22.0" prefWidth="17.0" text="0">
+                                                   <font>
+                                                      <Font name="Futura Medium" size="10.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </HBox>
+                                          <ProgressBar fx:id="fridayBar" prefWidth="200.0" progress="0.0" />
+                                       </children>
+                                    </VBox>
+                                    <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="6">
+                                       <children>
+                                          <Label fx:id="saturday" alignment="CENTER" prefHeight="17.0" prefWidth="133.0" text="Saturday" textFill="#567b44">
+                                             <font>
+                                                <Font name="Futura Medium" size="18.0" />
+                                             </font></Label>
+                                          <HBox alignment="CENTER" prefHeight="27.0" prefWidth="111.0">
+                                             <children>
+                                                <Label prefHeight="21.0" prefWidth="82.0" text="  Tasks Remaining">
+                                                   <font>
+                                                      <Font name="Futura Medium" size="10.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label fx:id="saturdayRemaining" alignment="CENTER" contentDisplay="RIGHT" prefHeight="22.0" prefWidth="16.0" text="0">
+                                                   <font>
+                                                      <Font name="Futura Medium" size="10.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </HBox>
+                                          <ProgressBar fx:id="saturdayBar" prefWidth="200.0" progress="0.0" />
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </GridPane>
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="516.0" prefWidth="158.0" translateX="10.0">
+                           <children>
+                              <Label alignment="BOTTOM_CENTER" prefHeight="30.0" prefWidth="158.0" text="Task Queue" textAlignment="CENTER">
+                                 <opaqueInsets>
+                                    <Insets />
+                                 </opaqueInsets>
+                                 <font>
+                                    <Font name="Futura Medium" size="16.0" />
+                                 </font>
+                              </Label>
+                              <Separator prefHeight="0.0" prefWidth="158.0" style="-fx-background-color: black;" />
+                              <TextField fx:id="taskSearch" prefHeight="33.0" prefWidth="158.0" promptText="Search..." style="-fx-background-color: F6F6F0;">
+                                 <font>
+                                    <Font name="Futura Medium" size="12.0" />
+                                 </font>
+                              </TextField>
+                              <ScrollPane hbarPolicy="NEVER" prefHeight="515.0" prefWidth="158.0">
+                                 <content>
+                                    <VBox fx:id="taskQueue" prefHeight="496.0" prefWidth="157.0" style="-fx-background-color: F6F6F0;" />
+                                 </content>
+                              </ScrollPane>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="20.0" prefWidth="143.0" text="Tasks Complete:">
+                     <font>
+                        <Font name="Futura Medium" size="15.0" />
+                     </font>
+                  </Label>
+                  <ProgressBar fx:id="taskBar" minHeight="-Infinity" minWidth="-Infinity" prefHeight="20.0" prefWidth="1171.0" style="-fx-background-color: C8E9B9;" translateX="15.0" />
+                  <HBox prefHeight="100.0" prefWidth="200.0" />
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+   </root>
+</Scene>

@@ -1,0 +1,1 @@
+{"name":"Week Name","tasks":[],"events":[{"name":"This is a great new event","description":"a great descption","weekday":"MONDAY","startTime":{"hour":4,"minute":0,"amPm":"AM"},"endTime":{"hour":6,"minute":0,"amPm":"AM"}}],"maxEvents":1000,"maxTasks":1000,"notesAndQuotes":"","password":"password"}}
